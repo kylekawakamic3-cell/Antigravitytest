@@ -596,3 +596,29 @@ body {
         height: 50vh;
     }
 }
+
+/* --- Scroll Chevron --- */
+.scroll-chevron {
+    color: var(--text-color);
+    transition: color 0.3s var(--easing);
+    animation: bounce 2s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-chevron:hover {
+    color: var(--accent-color);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
