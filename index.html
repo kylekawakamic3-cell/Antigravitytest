@@ -7,9 +7,7 @@
     <title>ANTIGRAVITY // ASCII</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -44,6 +42,29 @@
                 <a href="#about" class="nav-item">ABOUT</a>
                 <a href="#works" class="nav-item">WORKS</a>
                 <a href="#contact" class="nav-item">CONTACT</a>
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
+                    <div class="toggle-track">
+                        <div class="toggle-icons">
+                            <svg class="icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                            <svg class="icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                        </div>
+                        <div class="toggle-thumb"></div>
+                    </div>
+                </button>
             </div>
         </nav>
 
@@ -89,22 +110,28 @@
             </div>
 
             <div class="works-list">
-                <a href="project.html" class="work-row" data-ascii="BINARY" style="text-decoration: none;">
+                <a href="project.html" class="work-row" data-ascii="BINARY"
+                    data-image="neural_interface_preview_1763760972325.png" style="text-decoration: none;">
                     <div class="work-col name">NEURAL INTERFACE</div>
                     <div class="work-col type">SYSTEM DESIGN</div>
                     <div class="work-col year">2024</div>
                 </a>
-                <a href="project.html" class="work-row" data-ascii="HEX" style="text-decoration: none;">
+                <a href="project.html" class="work-row" data-ascii="HEX"
+                    data-image="synthetic_vision_preview_1763760986553.png" style="text-decoration: none;">
                     <div class="work-col name">SYNTHETIC VISION</div>
                     <div class="work-col type">DASHBOARD</div>
                     <div class="work-col year">2023</div>
                 </a>
-                <a href="project.html" class="work-row" data-ascii="WAVES" style="text-decoration: none;">
+                <a href="project.html" class="work-row" data-ascii="WAVES"
+                    data-image="echo_chamber_preview_1763761004303.png" style="text-decoration: none;">
                     <div class="work-col name">ECHO CHAMBER</div>
                     <div class="work-col type">WEBGL EXP</div>
                     <div class="work-col year">2022</div>
                 </a>
             </div>
+
+            <!-- Floating Project Preview Image -->
+            <div id="project-preview" class="project-preview-image"></div>
         </section>
 
         <!-- About / Info -->
@@ -137,7 +164,7 @@
 
     </main>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=1"></script>
 </body>
 
 </html>

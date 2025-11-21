@@ -65,7 +65,8 @@ class AsciiBackground {
     }
 
     animate() {
-        this.ctx.fillStyle = '#050505';
+        const computedStyle = getComputedStyle(document.body);
+        this.ctx.fillStyle = computedStyle.getPropertyValue('--bg-color').trim();
         this.ctx.fillRect(0, 0, this.width, this.height);
 
         this.ctx.fillStyle = '#333'; // Base text color
@@ -206,15 +207,61 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Project Hover Effects
+    // Project Hover Effects with Image Preview
     const projectItems = document.querySelectorAll('.work-row');
+    const projectPreview = document.getElementById('project-preview');
+
     projectItems.forEach(item => {
         item.addEventListener('mouseenter', () => {
             const type = item.getAttribute('data-ascii');
+            const imagePath = item.getAttribute('data-image');
+
+            // Update ASCII background
             if (window.asciiBg) window.asciiBg.setCharset(type);
+
+            // Show project preview image
+            if (imagePath && projectPreview) {
+                const imageUrl = `file:///Users/kylekawakami/.gemini/antigravity/brain/4b0506d7-27a0-48fd-b00f-986b776c9792/${imagePath}`;
+                projectPreview.style.backgroundImage = `url("${imageUrl}")`;
+                projectPreview.classList.add('visible');
+            }
         });
+
+        item.addEventListener('mousemove', (e) => {
+            // Update preview position to follow cursor
+            if (projectPreview && projectPreview.classList.contains('visible')) {
+                projectPreview.style.left = e.clientX + 'px';
+                projectPreview.style.top = e.clientY + 'px';
+            }
+        });
+
         item.addEventListener('mouseleave', () => {
+            // Reset ASCII background
             if (window.asciiBg) window.asciiBg.setCharset('DEFAULT');
+
+            // Hide project preview
+            if (projectPreview) {
+                projectPreview.classList.remove('visible');
+                projectPreview.style.backgroundImage = '';
+            }
         });
+    });
+    // Theme Toggle Logic
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('light-mode');
+        const isLight = body.classList.contains('light-mode');
+
+        // Update Canvas Colors
+        if (window.asciiBg) {
+            // Trigger resize to reset context font/colors if needed, 
+            // or just let the next animate loop pick up the new CSS variables if we used them.
+            // Since canvas uses explicit colors, we might need to update them.
+            // For now, let's just let the CSS variables handle the main UI.
+            // The canvas background is hardcoded in animate() to #050505.
+            // We should probably make the canvas respect the theme.
+        }
     });
 });
