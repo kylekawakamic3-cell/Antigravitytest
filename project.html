@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEURAL INTERFACE // ALEX CHEN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- The Living Background -->
+    <canvas id="ascii-canvas"></canvas>
+
+    <!-- Noise Overlay for texture -->
+    <div class="noise-overlay"></div>
+
+    <!-- Custom Cursor -->
+    <div id="cursor" class="custom-cursor"></div>
+    <div id="cursor-follower" class="cursor-follower"></div>
+
+    <!-- Main Content Wrapper -->
+    <main class="app-container">
+
+        <!-- Navigation -->
+        <nav class="top-nav">
+            <div class="nav-left">
+                <div class="logo"><a href="index.html" style="color: inherit; text-decoration: none;">ALEX CHEN</a>
+                </div>
+                <div class="role">PRODUCT DESIGNER</div>
+            </div>
+            <div class="nav-right">
+                <a href="index.html#about" class="nav-item">ABOUT</a>
+                <a href="index.html#works" class="nav-item">WORKS</a>
+                <a href="index.html#contact" class="nav-item">CONTACT</a>
+            </div>
+        </nav>
+
+        <!-- Full Width Hero Image -->
+        <section class="project-hero-image">
+            <div class="img-placeholder-large"></div>
+        </section>
+
+        <!-- New Project Header Structure -->
+        <section class="project-header-new">
+            <div class="project-label">Neural Interface</div>
+            <h1 class="project-headline">
+                Visualizing the future of<br>
+                brain-computer interaction
+            </h1>
+
+            <div class="project-meta-grid">
+                <div class="meta-col">
+                    <div class="meta-label">CONTEXT</div>
+                    <div class="meta-value">
+                        B2B<br>
+                        Medical Tech<br>
+                        San Francisco — US
+                    </div>
+                </div>
+                <div class="meta-col">
+                    <div class="meta-label">SERVICES</div>
+                    <div class="meta-value">
+                        System Architecture<br>
+                        UI/UX Design<br>
+                        Prototyping<br>
+                        Design Systems
+                    </div>
+                </div>
+                <div class="meta-col">
+                    <div class="meta-label">DELIVERABLES</div>
+                    <div class="meta-value">
+                        Web Application<br>
+                        Data Visualization Lib<br>
+                        Component Library
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Gallery -->
+        <section class="project-gallery">
+            <div class="gallery-item full">
+                <div class="img-placeholder-gallery"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item half">
+                    <div class="img-placeholder-gallery"></div>
+                </div>
+                <div class="gallery-item half">
+                    <div class="img-placeholder-gallery"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Project -->
+        <section class="next-project">
+            <div class="next-label">NEXT PROJECT</div>
+            <a href="#" class="next-link">SYNTHETIC VISION -></a>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

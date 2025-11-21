@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANTIGRAVITY // ASCII</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- The Living Background -->
+    <canvas id="ascii-canvas"></canvas>
+
+    <!-- Noise Overlay for texture -->
+    <div class="noise-overlay"></div>
+
+    <!-- Custom Cursor -->
+    <div id="cursor" class="custom-cursor"></div>
+    <div id="cursor-follower" class="cursor-follower"></div>
+
+    <!-- Main Content Wrapper -->
+    <main class="app-container">
+
+
+        <!-- Background Typography -->
+        <div class="bg-typography">
+            <span>2019</span>
+            <span>2025</span>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="top-nav">
+            <div class="nav-left">
+                <div class="logo">ALEX CHEN</div>
+                <div class="role">PRODUCT DESIGNER</div>
+            </div>
+            <div class="nav-right">
+                <a href="#about" class="nav-item">ABOUT</a>
+                <a href="#works" class="nav-item">WORKS</a>
+                <a href="#contact" class="nav-item">CONTACT</a>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero-minimal">
+            <div class="hero-center">
+                <!-- Circular Text Container -->
+                <div class="circular-text-container">
+                    <svg viewBox="0 0 200 200" class="circular-text">
+                        <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"
+                            fill="none" />
+                        <text>
+                            <textPath href="#circlePath" startOffset="0%">
+                                DESIGNING INTELLIGENCE • BRIDGING HUMAN INTENT & MACHINE LOGIC •
+                            </textPath>
+                        </text>
+                    </svg>
+                    <div class="center-image">
+                        <!-- Placeholder for a profile or abstract image -->
+                        <div class="img-placeholder"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-footer">
+                <div class="location">BASED IN SAN FRANCISCO</div>
+                <div class="scroll-hint">( SCROLL )</div>
+            </div>
+        </section>
+
+        <!-- Works List Section -->
+        <section id="works" class="works-list-section">
+            <div class="section-header">
+                <span class="label">SELECTED WORKS</span>
+                <span class="count">(03)</span>
+            </div>
+
+            <div class="works-list">
+                <a href="project.html" class="work-row" data-ascii="BINARY" style="text-decoration: none;">
+                    <div class="work-col name">NEURAL INTERFACE</div>
+                    <div class="work-col type">SYSTEM DESIGN</div>
+                    <div class="work-col year">2024</div>
+                </a>
+                <a href="project.html" class="work-row" data-ascii="HEX" style="text-decoration: none;">
+                    <div class="work-col name">SYNTHETIC VISION</div>
+                    <div class="work-col type">DASHBOARD</div>
+                    <div class="work-col year">2023</div>
+                </a>
+                <a href="project.html" class="work-row" data-ascii="WAVES" style="text-decoration: none;">
+                    <div class="work-col name">ECHO CHAMBER</div>
+                    <div class="work-col type">WEBGL EXP</div>
+                    <div class="work-col year">2022</div>
+                </a>
+            </div>
+        </section>
+
+        <!-- About / Info -->
+        <section id="about" class="info-section">
+            <div class="info-grid">
+                <div class="info-col">
+                    <span class="label">ABOUT</span>
+                    <p>Focusing on the intersection of AI and human interface. Creating tools that amplify human
+                        potential rather than replacing it.</p>
+                </div>
+                <div class="info-col">
+                    <span class="label">EXPERTISE</span>
+                    <ul class="clean-list">
+                        <li>PRODUCT STRATEGY</li>
+                        <li>UI/UX DESIGN</li>
+                        <li>PROTOTYPING</li>
+                        <li>FRONTEND DEV</li>
+                    </ul>
+                </div>
+                <div class="info-col">
+                    <span class="label">CONTACT</span>
+                    <ul class="clean-list">
+                        <li><a href="#">EMAIL -></a></li>
+                        <li><a href="#">TWITTER -></a></li>
+                        <li><a href="#">LINKEDIN -></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
