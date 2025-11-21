@@ -64,7 +64,7 @@ body {
 }
 
 .app-container {
-    max-width: 1800px;
+    width: 100%;
     padding: 2rem 4rem;
 }
 
@@ -515,4 +515,84 @@ body {
 
 .next-link:hover {
     color: var(--accent-color);
+}
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .app-container {
+        padding: 1.5rem;
+    }
+
+    .bg-typography {
+        display: none; /* Hide on mobile to reduce clutter */
+    }
+
+    /* Navigation */
+    .top-nav {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .nav-right {
+        gap: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Hero */
+    .circular-text-container {
+        width: 300px;
+        height: 300px;
+    }
+
+    .center-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .project-headline {
+        font-size: 3rem;
+        margin-bottom: 4rem;
+    }
+
+    /* Works List */
+    .work-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .work-col.name {
+        font-size: 1.5rem;
+    }
+
+    .work-col.type, .work-col.year {
+        font-size: 0.7rem;
+        opacity: 0.7;
+    }
+
+    /* Info Section */
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .info-col p {
+        font-size: 1.1rem;
+    }
+
+    /* Project Page */
+    .project-meta-grid {
+        grid-template-columns: 1fr; /* Stack meta columns */
+        gap: 2rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Stack gallery images */
+    }
+
+    .gallery-item.half {
+        height: 40vh;
+    }
+    
+    .project-hero-image {
+        height: 50vh;
+    }
 }
