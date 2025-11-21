@@ -63,6 +63,10 @@ body {
     font-weight: 400;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .app-container {
     width: 100%;
     padding: 2rem 4rem;
@@ -205,11 +209,35 @@ body {
 .hero-footer {
     position: absolute;
     bottom: 2rem;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    z-index: 10;
+}
+
+.scroll-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--text-color);
+    animation: bounce 2s infinite;
+    transition: color 0.3s var(--easing);
+}
+
+.scroll-indicator:hover {
+    color: var(--accent-color);
+}
+
+.scroll-label {
     font-size: 0.75rem;
-    color: var(--dim-color);
+    letter-spacing: 0.2em;
+    font-family: var(--font-mono);
+    font-weight: 700;
     text-transform: uppercase;
 }
 
@@ -516,6 +544,7 @@ body {
 .next-link:hover {
     color: var(--accent-color);
 }
+
 /* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
     .app-container {
@@ -523,7 +552,8 @@ body {
     }
 
     .bg-typography {
-        display: none; /* Hide on mobile to reduce clutter */
+        display: none;
+        /* Hide on mobile to reduce clutter */
     }
 
     /* Navigation */
@@ -563,7 +593,8 @@ body {
         font-size: 1.5rem;
     }
 
-    .work-col.type, .work-col.year {
+    .work-col.type,
+    .work-col.year {
         font-size: 0.7rem;
         opacity: 0.7;
     }
@@ -580,18 +611,20 @@ body {
 
     /* Project Page */
     .project-meta-grid {
-        grid-template-columns: 1fr; /* Stack meta columns */
+        grid-template-columns: 1fr;
+        /* Stack meta columns */
         gap: 2rem;
     }
 
     .gallery-grid {
-        grid-template-columns: 1fr; /* Stack gallery images */
+        grid-template-columns: 1fr;
+        /* Stack gallery images */
     }
 
     .gallery-item.half {
         height: 40vh;
     }
-    
+
     .project-hero-image {
         height: 50vh;
     }
@@ -599,9 +632,6 @@ body {
 
 /* --- Scroll Chevron --- */
 .scroll-chevron {
-    color: var(--text-color);
-    transition: color 0.3s var(--easing);
-    animation: bounce 2s infinite;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -612,12 +642,19 @@ body {
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transform: translateY(0);
     }
+
     40% {
         transform: translateY(-10px);
     }
+
     60% {
         transform: translateY(-5px);
     }
