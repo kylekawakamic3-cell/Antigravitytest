@@ -776,8 +776,8 @@ body {
 /* --- Project Preview Image --- */
 .project-preview-image {
     position: fixed;
-    width: 400px;
-    height: 300px;
+    width: 320px;
+    height: 240px;
     background-size: cover;
     background-position: center;
     pointer-events: none;

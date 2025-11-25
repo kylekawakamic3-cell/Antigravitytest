@@ -221,8 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Show project preview image
             if (imagePath && projectPreview) {
-                const imageUrl = `file:///Users/kylekawakami/.gemini/antigravity/brain/4b0506d7-27a0-48fd-b00f-986b776c9792/${imagePath}`;
-                projectPreview.style.backgroundImage = `url("${imageUrl}")`;
+                projectPreview.style.backgroundImage = `url("${imagePath}")`;
                 projectPreview.classList.add('visible');
             }
         });
